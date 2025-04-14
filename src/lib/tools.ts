@@ -1,4 +1,5 @@
 import StringTemplater from '@/pages/Tools/StringTemplater'
+import Spinner from '@/pages/Tools/Spinner'
 
 const tools = [
   {
@@ -7,6 +8,13 @@ const tools = [
     description:
       'Save a prefix and/or suffix and copy their result with any input',
     Component: StringTemplater,
+  },
+  {
+    id: 'spinner',
+    name: 'Spinner',
+    description:
+      'Spin a wheel with customizable options to make random selections',
+    Component: Spinner,
   },
 ]
 
