@@ -59,7 +59,7 @@ const Spinner = () => {
 
     // Draw the wheel
     drawWheel()
-  }, [options])
+  }, [options, colors])
 
   useEffect(() => {
     // Redraw wheel when rotation changes
