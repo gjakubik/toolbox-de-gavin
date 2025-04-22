@@ -1,5 +1,6 @@
 import StringTemplater from '@/pages/Tools/StringTemplater'
 import Spinner from '@/pages/Tools/Spinner'
+import TimezoneConverter from '@/pages/Tools/TimeZoneConverter/TimezoneConverter'
 
 const tools = [
   {
@@ -15,6 +16,13 @@ const tools = [
     description:
       'Spin a wheel with customizable options to make random selections',
     Component: Spinner,
+  },
+  {
+    id: 'timezone-converter',
+    name: 'Timezone Converter',
+    description:
+      'Convert dates between different timezones with a default to EST',
+    Component: TimezoneConverter,
   },
 ]
 
