@@ -67,7 +67,7 @@ export default function TimezoneConverter() {
           : converted.format(selectedFormat)
 
       return { convertedDate: formattedDate, error: '' }
-    } catch (e) {
+    } catch {
       return { convertedDate: '', error: 'Error converting timezone' }
     }
   }, [inputDate, targetTimezone, selectedFormat])

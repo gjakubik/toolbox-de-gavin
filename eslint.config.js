@@ -19,6 +19,17 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          varsIgnorePattern: '^_|^[A-Z].*Types$|^actionTypes$',
+          ignoreRestSiblings: true,
+          argsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+        },
+      ],
+      'arrow-body-style': ['error', 'as-needed'],
+      'func-style': ['error', 'expression'],
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

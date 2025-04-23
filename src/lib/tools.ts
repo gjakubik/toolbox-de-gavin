@@ -1,6 +1,7 @@
 import StringTemplater from '@/pages/Tools/StringTemplater'
 import Spinner from '@/pages/Tools/Spinner'
 import TimezoneConverter from '@/pages/Tools/TimeZoneConverter/TimezoneConverter'
+import CronParser from '@/pages/Tools/CronParser'
 
 const tools = [
   {
@@ -23,6 +24,13 @@ const tools = [
     description:
       'Convert dates between different timezones with a default to EST',
     Component: TimezoneConverter,
+  },
+  {
+    id: 'cron-parser',
+    name: 'Cron Parser',
+    description:
+      'Parse and explain cron expressions with a detailed breakdown of each field',
+    Component: CronParser,
   },
 ]
 
