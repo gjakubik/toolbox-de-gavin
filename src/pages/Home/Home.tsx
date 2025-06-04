@@ -22,7 +22,7 @@ const Home: React.FC = () => {
   }, [searchTerm])
 
   return (
-    <div className="container mx-auto px-12 py-8">
+    <div className="container mx-auto min-h-screen px-12 py-8">
       <Stack gap={16}>
         <Stack direction="row" justify="between" align="center">
           <Typography variant="h3">Gavin's Toolbox</Typography>
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
 
-          <ScrollArea className="h-[60vh]">
+          <ScrollArea className="h-full">
             {filteredTools.map((tool) => (
               <Link
                 key={tool.name}

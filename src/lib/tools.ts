@@ -2,6 +2,8 @@ import StringTemplater from '@/pages/Tools/StringTemplater'
 import Spinner from '@/pages/Tools/Spinner'
 import TimezoneConverter from '@/pages/Tools/TimeZoneConverter/TimezoneConverter'
 import CronParser from '@/pages/Tools/CronParser'
+import CSVPhoneNumberRowDuplicator from '@/pages/Tools/CSVPhoneNumberRowDuplicator'
+import CSVDeduper from '@/pages/Tools/CSVDeduper'
 
 const tools = [
   {
@@ -31,6 +33,20 @@ const tools = [
     description:
       'Parse and explain cron expressions with a detailed breakdown of each field',
     Component: CronParser,
+  },
+  {
+    id: 'csv-phone-number-row-duplicator',
+    name: 'CSV Phone Number Row Duplicator',
+    description:
+      'Clean customer CSV files by expanding rows with multiple phone numbers into separate records',
+    Component: CSVPhoneNumberRowDuplicator,
+  },
+  {
+    id: 'csv-deduper',
+    name: 'CSV Deduper',
+    description:
+      'Remove duplicate rows from CSV files based on a selected column while keeping the first occurrence',
+    Component: CSVDeduper,
   },
 ]
 
