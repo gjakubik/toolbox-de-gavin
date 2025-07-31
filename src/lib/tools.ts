@@ -4,8 +4,24 @@ import TimezoneConverter from '@/pages/Tools/TimeZoneConverter/TimezoneConverter
 import CronParser from '@/pages/Tools/CronParser'
 import CSVPhoneNumberRowDuplicator from '@/pages/Tools/CSVPhoneNumberRowDuplicator'
 import CSVDeduper from '@/pages/Tools/CSVDeduper'
+import RegexExtractor from '@/pages/Tools/RegexExtractor'
+import BracketRemover from '@/pages/Tools/BracketRemover'
 
 const tools = [
+  {
+    id: 'bracket-remover',
+    name: 'Bracket Text Remover',
+    description:
+      'Remove all text within square brackets [.*] from each line',
+    Component: BracketRemover,
+  },
+  {
+    id: 'regex-extractor',
+    name: 'Regex Extractor',
+    description:
+      'Extract text after regex matches from each line of a text block',
+    Component: RegexExtractor,
+  },
   {
     id: 'string-templater',
     name: 'String Templater',
