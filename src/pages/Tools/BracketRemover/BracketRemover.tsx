@@ -14,7 +14,7 @@ const BracketRemover: React.FC = () => {
   const removeBracketText = () => {
     const lines = inputText.split('\n')
     const processedLines = lines.map(line => 
-      line.replace(/\[.*?\]/g, '')
+      line.replace(/\[.*?\]/g, '').replace(/^I,\s+INFO -- :\s*/, '')
     )
     setOutputText(processedLines.join('\n'))
   }
