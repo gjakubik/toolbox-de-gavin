@@ -65,7 +65,7 @@ const SMSLinkGenerator = () => {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Stack spacing={4}>
+        <Stack gap={4}>
           <div>
             <Label htmlFor="phone">Phone Number</Label>
             <Input
