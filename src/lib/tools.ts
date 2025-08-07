@@ -6,8 +6,16 @@ import CSVPhoneNumberRowDuplicator from '@/pages/Tools/CSVPhoneNumberRowDuplicat
 import CSVDeduper from '@/pages/Tools/CSVDeduper'
 import RegexExtractor from '@/pages/Tools/RegexExtractor'
 import BracketRemover from '@/pages/Tools/BracketRemover'
+import SMSLinkGenerator from '@/pages/Tools/SMSLinkGenerator'
 
 const tools = [
+  {
+    id: 'sms-link-generator',
+    name: 'SMS Link Generator',
+    description:
+      'Generate universal SMS links with phone normalization and message pre-population',
+    Component: SMSLinkGenerator,
+  },
   {
     id: 'bracket-remover',
     name: 'Bracket Text Remover',
