@@ -7,8 +7,16 @@ import CSVDeduper from '@/pages/Tools/CSVDeduper'
 import RegexExtractor from '@/pages/Tools/RegexExtractor'
 import BracketRemover from '@/pages/Tools/BracketRemover'
 import SMSLinkGenerator from '@/pages/Tools/SMSLinkGenerator'
+import URLQueryEncoder from '@/pages/Tools/URLQueryEncoder'
 
 const tools = [
+  {
+    id: 'url-query-encoder',
+    name: 'URL Query Parameter Encoder/Decoder',
+    description:
+      'Encode regular text to URL query parameters and decode URL query parameters back to regular text',
+    Component: URLQueryEncoder,
+  },
   {
     id: 'sms-link-generator',
     name: 'SMS Link Generator',
@@ -19,8 +27,7 @@ const tools = [
   {
     id: 'bracket-remover',
     name: 'Bracket Text Remover',
-    description:
-      'Remove all text within square brackets [.*] from each line',
+    description: 'Remove all text within square brackets [.*] from each line',
     Component: BracketRemover,
   },
   {
