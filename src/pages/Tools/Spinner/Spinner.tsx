@@ -128,11 +128,13 @@ const Spinner = () => {
     ctx.fillStyle = '#333333'
     ctx.fill()
 
-    // Draw pointer
+    // Draw pointer on the outside of the wheel at the top (90 degrees, pointing inward)
+    const pointerLength = 20
+    const pointerWidth = 15
     ctx.beginPath()
-    ctx.moveTo(centerX + 15, centerY)
-    ctx.lineTo(centerX + 30, centerY - 10)
-    ctx.lineTo(centerX + 30, centerY + 10)
+    ctx.moveTo(centerX, centerY - radius)
+    ctx.lineTo(centerX - pointerWidth / 2, centerY - radius - pointerLength)
+    ctx.lineTo(centerX + pointerWidth / 2, centerY - radius - pointerLength)
     ctx.closePath()
     ctx.fillStyle = '#FF0000'
     ctx.fill()
@@ -197,11 +199,16 @@ const Spinner = () => {
       } else {
         // Spinning finished
         // Calculate which option is selected based on final rotation
-        const finalRotation = targetRotation % 360
+        // Arrow is at 90° (top), so adjust rotation by +90° to account for arrow position
+        const adjustedRotation = (targetRotation + 90) % 360
+        const normalizedRotation =
+          adjustedRotation < 0 ? adjustedRotation + 360 : adjustedRotation
         const sectionSize = 360 / options.length
+        // Use the original inverted calculation with adjusted rotation
         const selectedIndex =
-          options.length - 1 - Math.floor(finalRotation / sectionSize)
-        const selected = options[selectedIndex % options.length]
+          (options.length - 1 - Math.floor(normalizedRotation / sectionSize)) %
+          options.length
+        const selected = options[selectedIndex]
 
         setSelectedOption(selected)
         setIsSpinning(false)
