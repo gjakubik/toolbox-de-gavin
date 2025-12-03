@@ -10,11 +10,25 @@ import { ReloadIcon } from '@radix-ui/react-icons'
 // Default options for the spinner
 const DEFAULT_OPTIONS = [
   'Win Son',
-  'Banh Mi Saigon',
-  'Court St Grocer',
+  'Pita Yeero',
+  'Lenwich',
+  'Electric Burrito',
+  'Court Street Grocers',
+  'Glaze',
+  'Merriweather',
+  'Terra',
+  'Counter Service',
+  'Son del North',
+  'Manousheh',
+  'Hen House NYC',
+  'Xe May',
+  'Red Poke',
   'Kotti Berliner',
-  'Just Salad',
-  'Sweetgreen',
+  'Mangia',
+  'Chopt',
+  'Daily Provisions',
+  'Sophies Cuban',
+  'Popeyes',
 ]
 
 interface WheelSection {
